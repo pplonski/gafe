@@ -1,7 +1,8 @@
+from __future__ import print_function
 import pandas as pd
 import numpy as np
 from gafe import GAFE
-from new_feature_set import NewFeatureSet
+from gafe.new_feature_set import NewFeatureSet
 np.random.seed(123) # your custom seed
 
 # load numerai data
@@ -19,8 +20,8 @@ y_vald = vald.target
 X_test = np.asarray(test[[i for i in test.columns if 'feature' in i]])
 y_test = test.target
 
-# search for new features, number of new features from 10 to 30
-gafe = GAFE(duration = 60, new_features_lower_cnt = 10, new_features_upper_cnt = 30)
+# search for new features, number of new features from 10 to 30, search for about 1 minute (the time run is estimated)
+gafe = GAFE(duration = 1, new_features_lower_cnt = 10, new_features_upper_cnt = 30)
 gafe.fit(X, y, X_vald, y_vald) # use train and validation data
 
 nfs, score = gafe.best()
