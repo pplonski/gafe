@@ -18,5 +18,5 @@ setup(
     author_email='contact@mljar.com',
     license='Apache-2.0',
     packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
-    install_requires=['pandas', 'numpy', 'sklearn']
+    install_requires=['scipy', 'pandas', 'numpy', 'sklearn']
 )
