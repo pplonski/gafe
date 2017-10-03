@@ -1,10 +1,9 @@
 [![Build Status](https://travis-ci.org/pplonski/gafe.svg?branch=master)](https://travis-ci.org/pplonski/gafe)
 [![Coverage Status](https://coveralls.io/repos/github/pplonski/gafe/badge.svg?branch=master)](https://coveralls.io/github/pplonski/gafe?branch=master)
 
-# gafe
-Genetic Algorithm Feature Engineering
+# GAFE - Genetic Algorithm Feature Engineering
 
-Simple algorithm for searching new features.
+Simple algorithm for new features engineering.
 
  - gafe tries different combination of features with operators: `+`, `-`, `*`
  - add it to your dataset
